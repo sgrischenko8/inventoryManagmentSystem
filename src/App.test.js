@@ -9,15 +9,12 @@ import {
   within,
 } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Catalog from './pages/Catalog/Catalog.tsx';
-import { Loader } from './components/Loader/Loader.tsx';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import App from './App';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Outlet } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { store } from './redux/store';
-import { Suspense } from 'react';
 
 const renderWithProvider = (component) => {
   return {
