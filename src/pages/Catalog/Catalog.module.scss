@@ -1,0 +1,256 @@
+.catalogWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  @media screen and (min-width: 834px) {
+    flex-direction: row;
+    gap: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    gap: 32px;
+  }
+}
+
+.filterCatalogForm {
+  padding-bottom: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+  overflow: hidden;
+
+  @media screen and (min-width: 834px) {
+    width: 240px;
+    gap: 33px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 304px;
+    gap: 16px;
+  }
+
+  & > button:first-of-type {
+    padding: 0 10px;
+    position: absolute;
+    top: 4px;
+    right: 1rem;
+    font-size: 1rem;
+  }
+
+  ul {
+    position: absolute;
+    top: 43.5px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    li {
+      height: 25px;
+    }
+    button {
+      height: 25px;
+      background: white;
+      opacity: 0.1;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      svg {
+        fill: black;
+      }
+    }
+
+    &:first-of-type {
+      right: 0;
+
+      button {
+        color: red;
+      }
+    }
+  }
+
+  fieldset {
+    display: block;
+  }
+
+  fieldset {
+    legend {
+      width: 100%;
+    }
+
+    &:first-of-type {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid grey;
+    }
+  }
+
+  legend {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    margin-bottom: 16px;
+    padding: 0 3px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    min-height: 25px;
+    cursor: pointer;
+    text-wrap: nowrap;
+
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 8px;
+      gap: 19px;
+    }
+  }
+  label:last-child {
+    margin-bottom: 0;
+  }
+  input {
+    min-width: 18px;
+    min-height: 18px;
+    cursor: pointer;
+  }
+
+  & > div:last-child {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.priceSection {
+  div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  label {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-indent: 0px;
+  }
+
+  input {
+    width: 100%;
+    height: 32px;
+    text-align: right;
+    border: 1px solid #cccbc7;
+  }
+}
+
+.priceRange {
+  margin: 16px 0 0;
+  padding: 0;
+  justify-content: center;
+  height: 28px;
+
+  @media screen and (min-width: 834px) and (max-width: 1439px) {
+    margin: 16px 0 0;
+  }
+
+  & > div {
+    gap: 0;
+  }
+  & .bar {
+    height: 4px;
+    box-shadow: none;
+  }
+
+  & .bar-left {
+    padding: 0;
+    box-shadow: none;
+  }
+  & .bar-right {
+    padding: 0;
+    box-shadow: none;
+  }
+  .caption {
+    display: none;
+  }
+  .thumb::before {
+    margin: -11px 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    box-shadow: none;
+  }
+  .thumb-right::before {
+    right: 0;
+    width: 28px;
+    height: 28px;
+    box-shadow: none;
+  }
+}
+
+.top5 {
+  display: none;
+  @media screen and (min-width: 834px) {
+    padding-top: 1rem;
+    display: block;
+  }
+
+  h3 {
+    margin: 0 0 2rem 0;
+    text-align: center;
+  }
+
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    & img {
+      width: 100px;
+    }
+  }
+}
+
+.productSection {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  & > button {
+    margin-bottom: 1rem;
+  }
+
+  & > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+
+    @media screen and (min-width: 834px) {
+      justify-content: flex-start;
+    }
+    @media screen and (min-width: 1440px) {
+      gap: 32px;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+
+      @media screen and (min-width: 834px) {
+        width: 200px;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 304px;
+        gap: 0px;
+      }
+    }
+  }
+}

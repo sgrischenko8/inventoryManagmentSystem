@@ -1,0 +1,86 @@
+.header {
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background-color: #000;
+  z-index: 20;
+
+  @media screen and (min-width: 834px) {
+    padding: 0 32px;
+    height: 96px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 0 64px;
+    height: 112px;
+  }
+
+  & > div {
+    margin: 0 auto;
+    min-width: 288px;
+    height: 100%;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    @media screen and (min-width: 834px) {
+      width: 768px;
+      gap: 26px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      width: 1312px;
+    }
+  }
+
+  button {
+    border: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+
+    @media screen and (min-width: 834px) {
+      gap: 32px;
+    }
+
+    & > a {
+      position: relative;
+    }
+    & a:hover {
+      text-decoration: underline;
+    }
+
+    & span {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -12px;
+      right: -2px;
+      width: 16px;
+      height: 16px;
+      font-weight: 400;
+      font-size: 12px;
+      border-radius: 50%;
+      color: #f2f0ec;
+      background-color: #2d3f24;
+
+      @media screen and (min-width: 1440px) {
+        top: -20px;
+        right: -20px;
+        width: 22px;
+        height: 22px;
+        font-size: 16px;
+      }
+    }
+  }
+}
